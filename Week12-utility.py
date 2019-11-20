@@ -42,4 +42,13 @@ def FindWordCount(lst, st):
     return out
 
 
-PrintOutput(FindWordCount("Hello World", "or"))
+def Union(lst1, lst2):
+    for i in lst2:
+        if i not in lst1:
+            lst1.append(i)
+    return lst1
+
+
+scores = [5, 8, 10, 6, 4, "Martian"]
+players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
+PrintOutput(Union(scores, players2))
