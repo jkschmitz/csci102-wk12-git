@@ -42,6 +42,17 @@ def FindWordCount(lst, st):
     return out
 
 
+def ScoreFinder(ls1, ls2, st1):
+    x = 0
+    for (index, value) in enumerate(ls1):
+        if str(value).lower() == st1.lower():
+            out = str(ls2[index])
+            print("OUTPUT " + st1 + " got a score of " + out)
+            x = 1
+    if x == 0:
+        print("OUTPUT player not found")
+
+
 def Union(lst1, lst2):
     for i in lst2:
         if i not in lst1:
@@ -49,6 +60,7 @@ def Union(lst1, lst2):
     return lst1
 
 
-scores = [5, 8, 10, 6, 4, "Martian"]
+scores = [5, 8, 10, 6, 4]
 players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
-PrintOutput(Union(scores, players2))
+ScoreFinder(players2, scores, "Baka")
+ScoreFinder(players2, scores, "Jack")
