@@ -60,7 +60,21 @@ def Union(lst1, lst2):
     return lst1
 
 
-scores = [5, 8, 10, 6, 4]
+def Intersection(list1, list2):
+    out = []
+    temp = []
+    for i in list1:
+        for j in list2:
+            if i == j and i not in out:
+                out.append(str(i))
+    if out == temp:
+        return "No Overlap"
+    else:
+        return out
+
+
+scores1 = [5, 8, 10, 6, 4, "Xai"]
+scores2 = [5, 8, 10, 6, 4]
 players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
-ScoreFinder(players2, scores, "Baka")
-ScoreFinder(players2, scores, "Jack")
+PrintOutput(Intersection(scores1, players2))
+PrintOutput(Intersection(scores2, players2))
