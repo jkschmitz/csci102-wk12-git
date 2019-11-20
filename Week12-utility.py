@@ -86,10 +86,3 @@ def NotIn(list1, list2):
         return "All Overlap"
     else:
         return out
-
-
-scores1 = [5, 8, 10, 6, 4, "Xai"]
-scores2 = [5, 8, 10, 6, 4]
-players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
-PrintOutput(NotIn(scores1, players2))
-PrintOutput(NotIn(scores2, players2))
