@@ -20,4 +20,13 @@ def LoadFile(name):
     return ret2
 
 
-PrintOutput(LoadFile("test.txt"))
+def UpdateString(s1, s2, num):
+    ls = list(s1)
+    ls[num] = s2
+    temp = ""
+    for i in ls:
+        temp += str(i)
+    return temp
+
+
+PrintOutput(UpdateString("Hello World", "a", 3))
