@@ -29,4 +29,17 @@ def UpdateString(s1, s2, num):
     return temp
 
 
-PrintOutput(UpdateString("Hello World", "a", 3))
+def FindWordCount(lst, st):
+    x = 0
+    out = 0
+    while (len(st)) <= (len(lst) - x + 1):
+        if len(st) == 1 and lst[x] == st:
+            out += 1
+        else:
+            if lst[x:(x + len(st))] == st:
+                out += 1
+        x += 1
+    return out
+
+
+PrintOutput(FindWordCount("Hello World", "or"))
