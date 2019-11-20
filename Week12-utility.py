@@ -73,8 +73,23 @@ def Intersection(list1, list2):
         return out
 
 
+def NotIn(list1, list2):
+    out = []
+    temp = []
+    for i in list1:
+        if i not in list2 and i not in out:
+            out.append(i)
+    for i in list2:
+        if i not in list1 and i not in out:
+            out.append(i)
+    if out == temp:
+        return "All Overlap"
+    else:
+        return out
+
+
 scores1 = [5, 8, 10, 6, 4, "Xai"]
 scores2 = [5, 8, 10, 6, 4]
 players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
-PrintOutput(Intersection(scores1, players2))
-PrintOutput(Intersection(scores2, players2))
+PrintOutput(NotIn(scores1, players2))
+PrintOutput(NotIn(scores2, players2))
